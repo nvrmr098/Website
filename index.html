@@ -1347,6 +1347,29 @@
         <strong>nevilmaru03@gmail.com</strong>
       </a>
 
+      <div class="contact-form-wrap">
+        <div class="section-label">Direct Message</div>
+        <h3 style="margin:10px 0 0; font-size:1.4rem;">Send a message directly</h3>
+        <p class="form-note">Fill out the form below and the message will be sent to my email.</p>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="New portfolio contact form message">
+        <input type="hidden" name="from_name" value="Nevil Maru Portfolio">
+        <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+          </div>
+      
+          <input type="text" name="company" placeholder="Company / Organization">
+          <textarea name="message" placeholder="Your message" required></textarea>
+      
+          <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+        </form>
+      </div>
+      
       <a class="contact-card magnetic" href="tel:+4917684031486">
         <span>Phone</span>
         <strong>0176 84031486</strong>
