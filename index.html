@@ -272,10 +272,16 @@
       transition:.3s var(--ease);
       font-size:.95rem;
     }
-
+    
     nav a:hover{
       color:var(--text);
       background:rgba(255,255,255,.08);
+    }
+
+    .lang-active{
+      color:var(--text);
+      background:rgba(255,255,255,.08);
+      font-weight:700;
     }
 
     .hero{
@@ -1042,10 +1048,13 @@
         <div>Nevil Maru</div>
       </div>
       <nav>
-        <a href="#about" class="magnetic">About</a>
-        <a href="#experience" class="magnetic">Experience</a>
-        <a href="#skills" class="magnetic">Skills</a>
-        <a href="#contact" class="magnetic">Contact</a>
+          <a href="#about" class="magnetic">About</a>
+          <a href="#experience" class="magnetic">Experience</a>
+          <a href="#skills" class="magnetic">Skills</a>
+          <a href="#contact" class="magnetic">Contact</a>
+          <a href="index.html" class="magnetic lang-active">EN</a>
+          <a href="de.html" class="magnetic">DE</a>
+
       </nav>
     </div>
   </header>
