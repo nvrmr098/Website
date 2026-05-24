@@ -211,6 +211,100 @@
         color:#334155;
       } 
 
+      .quick-card{
+        position:fixed;
+        right:22px;
+        bottom:24px;
+        z-index:120;
+        width:220px;
+        padding:16px;
+        border-radius:24px;
+        background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+        border:1px solid rgba(255,255,255,.12);
+        box-shadow:0 20px 50px rgba(0,0,0,.25);
+        backdrop-filter:blur(18px) saturate(160%);
+        -webkit-backdrop-filter:blur(18px) saturate(160%);
+      }
+      
+      .quick-card-title{
+        font-size:.78rem;
+        letter-spacing:.14em;
+        text-transform:uppercase;
+        font-weight:800;
+        color:#d9f5ff;
+        margin-bottom:12px;
+      }
+      
+      .quick-card-links{
+        display:grid;
+        gap:10px;
+      }
+      
+      .quick-card-links a{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+        padding:12px 14px;
+        border-radius:16px;
+        text-decoration:none;
+        color:var(--text);
+        background:rgba(255,255,255,.06);
+        border:1px solid rgba(255,255,255,.08);
+        transition:transform .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+      }
+      
+      .quick-card-links a:hover{
+        transform:translateY(-2px);
+        background:rgba(255,255,255,.10);
+        border-color:rgba(79,209,255,.22);
+      }
+      
+      .quick-card-links span{
+        color:var(--muted);
+        font-size:.9rem;
+      }
+      
+      .quick-card-close{
+        position:absolute;
+        top:10px;
+        right:10px;
+        width:28px;
+        height:28px;
+        border:none;
+        border-radius:50%;
+        cursor:pointer;
+        background:rgba(255,255,255,.08);
+        color:var(--text);
+      }
+      
+      body.light-mode .quick-card{
+        background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,250,252,.90));
+        border:1px solid rgba(15,23,42,.10);
+        box-shadow:0 16px 40px rgba(15,23,42,.10);
+      }
+      
+      body.light-mode .quick-card-title{
+        color:#2563eb;
+      }
+      
+      body.light-mode .quick-card-links a{
+        background:rgba(255,255,255,.92);
+        border:1px solid rgba(15,23,42,.08);
+      }
+      
+      @media (max-width: 760px){
+        .quick-card{
+          right:14px;
+          left:14px;
+          bottom:14px;
+          width:auto;
+          padding:14px;
+        }
+      }
+
+
+      
 
       
     }
@@ -1912,7 +2006,36 @@
           themeToggle.textContent = isLight ? '🌙' : '☀️';
         });
       }
-   
+       
+
+      <div class="quick-card" id="quickCard">
+        <button class="quick-card-close" id="quickCardClose" aria-label="Schnellzugriff schließen">×</button>
+        <div class="quick-card-title">Schnellzugriff</div>
+        <div class="quick-card-links">
+          <a href="assets/Lebenslauf_Nevil_Maru_IT_Support.pdf" download>
+            <strong>Lebenslauf</strong>
+            <span>PDF</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nevil-maru" target="_blank" rel="noopener noreferrer">
+            <strong>LinkedIn</strong>
+            <span>Öffnen</span>
+          </a>
+          <a href="mailto:nevilmaru03@gmail.com">
+            <strong>E-Mail</strong>
+            <span>Senden</span>
+          </a>
+        </div>
+      </div>
+
+      const quickCard = document.getElementById('quickCard');
+      const quickCardClose = document.getElementById('quickCardClose');
+      
+      if (quickCard && quickCardClose) {
+        quickCardClose.addEventListener('click', () => {
+          quickCard.style.display = 'none';
+        });
+      }
+    
     
     
   </script>
