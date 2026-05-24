@@ -183,6 +183,33 @@
         color:#334155;
       }
 
+      body.light-mode .preloader{
+        background:
+          radial-gradient(circle at top, rgba(37,99,235,.10), transparent 25%),
+          linear-gradient(180deg, #edf3fb, #e7eef8);
+      }
+      
+      body.light-mode .loader-core{
+        background:rgba(255,255,255,.88);
+        border:1px solid rgba(15,23,42,.10);
+        box-shadow:0 20px 50px rgba(15,23,42,.10);
+      }
+      
+      body.light-mode .loader-core::before{
+        border-color:rgba(37,99,235,.22);
+      }
+      
+      body.light-mode .loader-core::after{
+        border-color:rgba(124,58,237,.18);
+      }
+      
+      body.light-mode .loader-name{
+        color:#0f172a;
+      }
+      
+      body.light-mode .loader-name span{
+        color:#334155;
+      } 
 
 
       
