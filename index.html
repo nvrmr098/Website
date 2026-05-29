@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nevil Maru — Portfolio</title>
-  <meta name="description" content="Portfolio von Nevil Maru — IT Support, digitale Abläufe und Website-Arbeit." />
+  <meta name="description" content="Nevil Maru portfolio — IT Support, Digital Operations, and Website Work." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -42,6 +42,7 @@
         --shadow:0 18px 40px rgba(15,23,42,.10);
       }
 
+
       body.light-mode{
         background:
           radial-gradient(circle at 15% 20%, rgba(37,99,235,.08), transparent 24%),
@@ -49,27 +50,27 @@
           radial-gradient(circle at 50% 100%, rgba(8,145,178,.06), transparent 26%),
           linear-gradient(180deg, #edf3fb 0%, #e7eef8 42%, #f4f8fd 100%);
       }
+
+        body.light-mode .glass,
+        body.light-mode .panel,
+        body.light-mode .floating-card,
+        body.light-mode .job,
+        body.light-mode .contact-card,
+        body.light-mode .contact-form-wrap,
+        body.light-mode .stat,
+        body.light-mode .mini-orb,
+        body.light-mode .ticker span,
+        body.light-mode .planet,
+        body.light-mode .nav{
+          background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.82));
+          border:1px solid rgba(15,23,42,.10);
+          box-shadow:0 16px 40px rgba(15,23,42,.08);
+        }
       
       body.light-mode::before{
         background:
           linear-gradient(rgba(15,23,42,.035) 1px, transparent 1px),
           linear-gradient(90deg, rgba(15,23,42,.035) 1px, transparent 1px);
-      }
-
-      body.light-mode .glass,
-      body.light-mode .panel,
-      body.light-mode .floating-card,
-      body.light-mode .job,
-      body.light-mode .contact-card,
-      body.light-mode .contact-form-wrap,
-      body.light-mode .stat,
-      body.light-mode .mini-orb,
-      body.light-mode .ticker span,
-      body.light-mode .planet,
-      body.light-mode .nav{
-        background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.82));
-        border:1px solid rgba(15,23,42,.10);
-        box-shadow:0 16px 40px rgba(15,23,42,.08);
       }
 
       body.light-mode h1,
@@ -209,8 +210,7 @@
       
       body.light-mode .loader-name span{
         color:#334155;
-      } 
-
+      }
 
       
     }
@@ -414,7 +414,7 @@
       padding:12px 16px;
       border-radius:999px;
     }
-    
+
     .theme-toggle{
       width:46px;
       height:46px;
@@ -437,7 +437,6 @@
     }
     
 
-    
     .brand{
       display:flex;
       align-items:center;
@@ -482,45 +481,45 @@
       transition:.3s var(--ease);
       font-size:.95rem;
     }
-
+    
     nav a:hover{
       color:var(--text);
       background:rgba(255,255,255,.08);
     }
 
-       .lang-switch{
-          display:flex;
-          align-items:center;
-          gap:6px;
-          padding:6px;
-          border-radius:999px;
-          background:rgba(255,255,255,.06);
-          border:1px solid rgba(255,255,255,.10);
-          box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
-        }
-        
-        .lang-switch a{
-          min-width:48px;
-          text-align:center;
-          padding:10px 14px;
-          border-radius:999px;
-          color:var(--muted);
-          font-size:.88rem;
-          font-weight:700;
-          letter-spacing:.04em;
-          transition:all .3s var(--ease);
-        }
-        
-        .lang-switch a:hover{
-          color:var(--text);
-          background:rgba(255,255,255,.06);
-        }
-        
-        .lang-switch a.lang-active{
-          color:#08111f;
-          background:linear-gradient(135deg,var(--primary),var(--secondary));
-          box-shadow:0 10px 30px rgba(79,209,255,.22);
-        }
+    .lang-switch{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+    }
+    
+    .lang-switch a{
+      min-width:48px;
+      text-align:center;
+      padding:10px 14px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:.88rem;
+      font-weight:700;
+      letter-spacing:.04em;
+      transition:all .3s var(--ease);
+    }
+    
+    .lang-switch a:hover{
+      color:var(--text);
+      background:rgba(255,255,255,.06);
+    }
+    
+    .lang-switch a.lang-active{
+      color:#08111f;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      box-shadow:0 10px 30px rgba(79,209,255,.22);
+    }
 
     
     .lang-active{
@@ -633,133 +632,6 @@
       box-shadow:0 0 18px var(--accent);
       animation:pulse 1.6s infinite;
     }
-
-       .contact-form-wrap{
-        margin-top:24px;
-        padding:28px;
-        border-radius:30px;
-        background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-        border:1px solid rgba(255,255,255,.10);
-        box-shadow:0 20px 60px rgba(0,0,0,.18);
-      }
-      
-      .contact-form{
-        display:grid;
-        gap:16px;
-        margin-top:20px;
-        max-width:760px;
-      }
-      
-      .form-row{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:16px;
-      }
-      
-      .contact-form input,
-      .contact-form textarea{
-        width:100%;
-        padding:16px 18px;
-        border-radius:16px;
-        border:1px solid rgba(255,255,255,.12);
-        background:rgba(255,255,255,.07);
-        color:var(--text);
-        font:inherit;
-        outline:none;
-        box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
-        transition:border-color .25s ease, background .25s ease, box-shadow .25s ease, transform .25s ease;
-      }
-      
-      .contact-form input::placeholder,
-      .contact-form textarea::placeholder{
-        color:var(--muted);
-      }
-      
-      .contact-form input:focus,
-      .contact-form textarea:focus{
-        border-color:rgba(79,209,255,.45);
-        background:rgba(255,255,255,.09);
-        box-shadow:0 0 0 4px rgba(79,209,255,.10);
-      }
-      
-      .contact-form textarea{
-        min-height:180px;
-        resize:vertical;
-        grid-column:1 / -1;
-      }
-      
-      .contact-form .full{
-        grid-column:1 / -1;
-      }
-      
-      .h-captcha{
-        margin-top:4px;
-        transform-origin:left center;
-      }
-      
-      .form-actions{
-        display:flex;
-        align-items:center;
-        gap:16px;
-        flex-wrap:wrap;
-      }
-      
-      .form-actions .btn{
-        min-width:220px;
-      }
-      
-      .form-note{
-        color:var(--muted);
-        font-size:.95rem;
-        margin-top:8px;
-        max-width:60ch;
-      }
-      
-      @media (max-width: 760px){
-        .form-row{
-          grid-template-columns:1fr;
-        }
-      
-        .contact-form{
-          max-width:100%;
-        }
-      
-        .contact-form textarea,
-        .contact-form .full{
-          grid-column:auto;
-        }
-      
-        .h-captcha{
-          transform:scale(.94);
-        }
-      
-        .form-actions .btn{
-          width:100%;
-          min-width:unset;
-        }
-      }
-      
-      .contact-grid-small{
-        grid-template-columns:repeat(2, 1fr);
-        gap:14px;
-        margin-top:18px;
-      }
-      
-      .contact-card{
-        min-height:110px;
-        padding:22px;
-        border-radius:24px;
-        background:rgba(255,255,255,.05);
-        border:1px solid rgba(255,255,255,.10);
-        transition:transform .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
-      }
-      
-      @media (max-width: 760px){
-        .contact-grid-small{
-          grid-template-columns:1fr;
-        }
-      }
-    
 
     h1{
       margin:18px 0 0;
@@ -911,6 +783,133 @@
       gap:12px;
       margin-top:18px;
     }
+
+     .contact-form-wrap{
+        margin-top:24px;
+        padding:28px;
+        border-radius:30px;
+        background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+        border:1px solid rgba(255,255,255,.10);
+        box-shadow:0 20px 60px rgba(0,0,0,.18);
+      }
+      
+      .contact-form{
+        display:grid;
+        gap:16px;
+        margin-top:20px;
+        max-width:760px;
+      }
+      
+      .form-row{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:16px;
+      }
+      
+      .contact-form input,
+      .contact-form textarea{
+        width:100%;
+        padding:16px 18px;
+        border-radius:16px;
+        border:1px solid rgba(255,255,255,.12);
+        background:rgba(255,255,255,.07);
+        color:var(--text);
+        font:inherit;
+        outline:none;
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+        transition:border-color .25s ease, background .25s ease, box-shadow .25s ease, transform .25s ease;
+      }
+      
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder{
+        color:var(--muted);
+      }
+      
+      .contact-form input:focus,
+      .contact-form textarea:focus{
+        border-color:rgba(79,209,255,.45);
+        background:rgba(255,255,255,.09);
+        box-shadow:0 0 0 4px rgba(79,209,255,.10);
+      }
+      
+      .contact-form textarea{
+        min-height:180px;
+        resize:vertical;
+        grid-column:1 / -1;
+      }
+      
+      .contact-form .full{
+        grid-column:1 / -1;
+      }
+      
+      .h-captcha{
+        margin-top:4px;
+        transform-origin:left center;
+      }
+      
+      .form-actions{
+        display:flex;
+        align-items:center;
+        gap:16px;
+        flex-wrap:wrap;
+      }
+      
+      .form-actions .btn{
+        min-width:220px;
+      }
+      
+      .form-note{
+        color:var(--muted);
+        font-size:.95rem;
+        margin-top:8px;
+        max-width:60ch;
+      }
+      
+      @media (max-width: 760px){
+        .form-row{
+          grid-template-columns:1fr;
+        }
+      
+        .contact-form{
+          max-width:100%;
+        }
+      
+        .contact-form textarea,
+        .contact-form .full{
+          grid-column:auto;
+        }
+      
+        .h-captcha{
+          transform:scale(.94);
+        }
+      
+        .form-actions .btn{
+          width:100%;
+          min-width:unset;
+        }
+      }
+      
+      .contact-grid-small{
+        grid-template-columns:repeat(2, 1fr);
+        gap:14px;
+        margin-top:18px;
+      }
+      
+      .contact-card{
+        min-height:110px;
+        padding:22px;
+        border-radius:24px;
+        background:rgba(255,255,255,.05);
+        border:1px solid rgba(255,255,255,.10);
+        transition:transform .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
+      }
+      
+      @media (max-width: 760px){
+        .contact-grid-small{
+          grid-template-columns:1fr;
+        }
+      }
+
 
     .mini-orb{
       padding:18px;
@@ -1064,107 +1063,116 @@
     }
 
     .job{
-        position:relative;
-        padding:24px 24px 24px 26px;
-        border-radius:28px;
-        overflow:hidden;
-        transition:transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+      position:relative;
+      padding:24px 24px 24px 26px;
+      border-radius:28px;
+      overflow:hidden;
+      transition:transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+    }
+    
+    .job::before{
+      content:"";
+      position:absolute;
+      left:-36px;
+      top:30px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      border:3px solid rgba(7,17,29,.9);
+      box-shadow:0 0 0 6px rgba(79,209,255,.10), 0 0 24px rgba(79,209,255,.28);
+    }
+    
+    .job::after{
+      content:"";
+      position:absolute;
+      left:-22px;
+      top:36px;
+      width:22px;
+      height:2px;
+      background:linear-gradient(90deg, rgba(79,209,255,.55), rgba(79,209,255,0));
+    }
+    
+    .job:hover{
+      transform:translateY(-8px) translateX(4px);
+      border-color:rgba(79,209,255,.24);
+      box-shadow:0 24px 60px rgba(0,0,0,.24);
+    }
+    
+    .job-top{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-start;
+      margin-bottom:12px;
+    }
+    
+    .job h3{
+      margin:0;
+      font-size:1.22rem;
+      letter-spacing:-.04em;
+    }
+    
+    .job .company{
+      color:#a8f0ff;
+      font-weight:700;
+      margin-top:5px;
+    }
+    
+    .job time{
+      color:var(--muted);
+      font-size:.92rem;
+      white-space:nowrap;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    
+    .job p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+    
+    @media (max-width: 760px){
+      .timeline{
+        padding-left:28px;
+        gap:18px;
       }
-      
+    
+      .timeline::before{
+        left:9px;
+      }
+    
       .job::before{
-        content:"";
-        position:absolute;
-        left:-36px;
-        top:30px;
-        width:14px;
-        height:14px;
-        border-radius:50%;
-        background:linear-gradient(135deg,var(--primary),var(--secondary));
-        border:3px solid rgba(7,17,29,.9);
-        box-shadow:0 0 0 6px rgba(79,209,255,.10), 0 0 24px rgba(79,209,255,.28);
+        left:-29px;
+        width:12px;
+        height:12px;
       }
-      
+    
       .job::after{
-        content:"";
-        position:absolute;
-        left:-22px;
-        top:36px;
-        width:22px;
-        height:2px;
-        background:linear-gradient(90deg, rgba(79,209,255,.55), rgba(79,209,255,0));
+        left:-15px;
+        width:14px;
       }
-      
-      .job:hover{
-        transform:translateY(-8px) translateX(4px);
-        border-color:rgba(79,209,255,.24);
-        box-shadow:0 24px 60px rgba(0,0,0,.24);
-      }
-      
+    
       .job-top{
-        display:flex;
-        justify-content:space-between;
-        gap:16px;
-        align-items:flex-start;
-        margin-bottom:12px;
+        flex-direction:column;
       }
-      
-      .job h3{
-        margin:0;
-        font-size:1.22rem;
-        letter-spacing:-.04em;
-      }
-      
-      .job .company{
-        color:#a8f0ff;
-        font-weight:700;
-        margin-top:5px;
-      }
-      
+    
       .job time{
-        color:var(--muted);
-        font-size:.92rem;
-        white-space:nowrap;
-        padding:8px 12px;
-        border-radius:999px;
-        background:rgba(255,255,255,.05);
-        border:1px solid rgba(255,255,255,.08);
+        white-space:normal;
       }
-      
-      .job p{
-        margin:0;
-        color:var(--muted);
-        line-height:1.7;
-      }
-      
-      @media (max-width: 760px){
-        .timeline{
-          padding-left:28px;
-          gap:18px;
-        }
-      
-        .timeline::before{
-          left:9px;
-        }
-      
-        .job::before{
-          left:-29px;
-          width:12px;
-          height:12px;
-        }
-      
-        .job::after{
-          left:-15px;
-          width:14px;
-        }
-      
-        .job-top{
-          flex-direction:column;
-        }
-      
-        .job time{
-          white-space:normal;
-        }
-      }
+    }
+
+    .skills-showcase{
+      margin-top:26px;
+      padding:40px 24px;
+      border-radius:34px;
+      position:relative;
+      min-height:540px;
+      overflow:hidden;
+    }
 
     .skills-showcase::before,
     .skills-showcase::after{
@@ -1471,7 +1479,7 @@
     <div class="loader-core">
       <div class="loader-name">
         Nevil Maru
-        <span>Portfolio wird geladen</span>
+        <span>Loading Portfolio</span>
       </div>
     </div>
   </div>
@@ -1483,17 +1491,17 @@
         <div>Nevil Maru</div>
       </div>
       <nav>
-        <a href="#about" class="magnetic">Über mich</a>
-        <a href="#experience" class="magnetic">Erfahrung</a>
-        <a href="#skills" class="magnetic">Fähigkeiten</a>
-        <a href="#contact" class="magnetic">Kontakt</a>
-        <div class="lang-switch">
-          <a href="index.html" class="magnetic">EN</a>
-          <a href="de.html" class="magnetic lang-active">DE</a>
-        </div>
+          <a href="#about" class="magnetic">About</a>
+          <a href="#experience" class="magnetic">Experience</a>
+          <a href="#skills" class="magnetic">Skills</a>
+          <a href="#contact" class="magnetic">Contact</a>
+          <div class="lang-switch">
+            <a href="index.html" class="magnetic lang-active">EN</a>
+            <a href="de.html" class="magnetic">DE</a>
+          </div>
 
         <button class="theme-toggle magnetic" id="themeToggle" aria-label="Toggle theme">☀️</button>
-        
+
       </nav>
     </div>
   </header>
@@ -1509,64 +1517,62 @@
     <div class="hero-inner">
       <div class="hero-copy glass parallax" data-speed="0.09">
         <div>
-          <div class="eyebrow"><i></i> Offen für IT-Stellen</div>
+          <div class="eyebrow"><i></i> Open to IT Opportunities</div>
           <h1>
             <span class="title-line"><span>Nevil</span></span>
             <span class="title-line"><span>Maru</span></span>
             <span class="title-line"><span>Portfolio</span></span>
           </h1>
           <p class="hero-lead">
-            Informatikstudent mit praktischer Erfahrung in IT-Support, Büroorganisation,
-            kundenorientierten Arbeitsumfeldern und Website-Arbeit präsentiert in einem
-            visuell starken Portfolio.
+            Computer science student with practical experience across IT support, office operations,
+            customer-facing environments, and website work presented through a high-impact visual portfolio.
           </p>
 
           <div class="hero-actions">
-            <a href="assets/Lebenslauf_Nevil_Maru_IT_Support.pdf" download class="btn btn-primary magnetic">Lebenslauf herunterladen</a>
-            <a href="#contact" class="btn btn-secondary magnetic">Kontakt</a>
+            <a href="assets/Lebenslauf_Nevil_Maru_IT_Support.pdf" download class="btn btn-primary magnetic">Download CV</a>
+            <a href="#contact" class="btn btn-secondary magnetic">Contact Me</a>
           </div>
         </div>
 
         <div class="hero-stats">
           <div class="stat">
             <strong data-count="2">0</strong>
-            <span>Jahre IT-Support-Erfahrung</span>
+            <span>Years of IT support experience</span>
           </div>
           <div class="stat">
             <strong data-count="5">0</strong>
-            <span>Gesprochene Sprachen</span>
+            <span>Languages spoken</span>
           </div>
           <div class="stat">
             <strong data-count="2">0</strong>
-            <span>Zuletzt ausgeübte Positionen</span>
+            <span>Recent roles completed</span>
           </div>
         </div>
       </div>
 
       <div class="hero-side parallax" data-speed="0.16">
         <div class="floating-card glass tilt reveal">
-          <h2>Außergewöhnlich im Design.</h2>
+          <h2>Out-of-the-box by design.</h2>
           <p>
-            Ein cineastisches Portfolio, das lebendig wirkt: Bewegung, Tiefe, Licht,
-            Interaktion und ein hochwertiger erster Eindruck für Recruiter.
+            A cinematic portfolio built to feel alive: motion, depth, glow, interaction, and a premium recruiter-first presentation.
           </p>
 
           <div class="orb-stack">
             <div class="mini-orb">
               <b>IT Support</b>
-              <span>Nutzerorientiert, strukturiert und ruhig auch unter Druck.</span>
+              <span>User-focused, structured, calm under pressure.</span>
             </div>
             <div class="mini-orb">
-              <b>Website-Arbeit</b>
-              <span>Wix-Erfahrung, HTML-Grundlagen und digitales Feingefühl.</span>
+              <b>Website Work</b>
+              <span>Wix experience, HTML foundations, digital polish.</span>
             </div>
             <div class="mini-orb">
-              <b>Operative Abläufe</b>
-              <span>Koordination, Dokumentation, Zuverlässigkeit und Tempo.</span>
+              <b>Operations</b>
+              <span>Coordination, documentation, reliability, speed.</span>
             </div>
             <div class="mini-orb">
-              <b>Mehrsprachig</b>
-              <span>Deutsch, Englisch, Hindi, Gujarati, grundlegendes Spanisch.</span>
+              <b>Multilingual</b>
+              <span>German, English, Hindi, Gujarati, basic Spanish.</span>
             </div>
           </div>
         </div>
@@ -1581,8 +1587,8 @@
             <span>HTML</span>
             <span>Wix</span>
             <span>MS Office</span>
-            <span>Problemlösung</span>
-            <span>Kundenkommunikation</span>
+            <span>Problem Solving</span>
+            <span>Customer Communication</span>
             <span>IT Support</span>
             <span>Helpdesk</span>
             <span>Python</span>
@@ -1591,8 +1597,8 @@
             <span>HTML</span>
             <span>Wix</span>
             <span>MS Office</span>
-            <span>Problemlösung</span>
-            <span>Kundenkommunikation</span>
+            <span>Problem Solving</span>
+            <span>Customer Communication</span>
           </div>
         </div>
       </div>
@@ -1602,31 +1608,28 @@
   <section class="section" id="about">
     <div class="intro-grid">
       <div class="panel glass reveal tilt">
-        <div class="section-label">Profil</div>
-        <h2 class="section-title">Ein Portfolio, das überzeugt, bevor der CV geöffnet wird.</h2>
+        <div class="section-label">Profile</div>
+        <h2 class="section-title">A portfolio that hits before the CV even opens.</h2>
         <p class="section-text">
-          Ich bin ein IT-affiner Informatikstudent mit praktischer Erfahrung in Administration,
-          serviceorientierten Arbeitsumfeldern, digitalen Abläufen und ersten Schritten in der
-          Website-Entwicklung. Ich lerne schnell, kommuniziere klar und arbeite strukturiert
-          sowie lösungsorientiert.
+          I’m an IT-oriented computer science student with practical experience in administration,
+          service environments, digital workflows, and early website development. I learn fast,
+          communicate clearly, and work in a structured, solution-focused way.
         </p>
         <div class="quote">
-          Mit Wirkung gestaltet: weniger langweilige Textblöcke, mehr Präsenz, mehr Bewegung
-          und ein klarer Fokus auf den downloadbaren Lebenslauf.
+          Built for impact: fewer boring paragraphs, more presence, motion, and a strong downloadable résumé flow.
         </div>
       </div>
 
       <div class="panel glass reveal tilt download-panel">
         <div>
-          <div class="download-badge"><i></i> Bereit für Recruiter</div>
-          <h2 class="section-title" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin-top:14px;">Weniger Text auf der Seite. Mehr Eindruck.</h2>
+          <div class="download-badge"><i></i> Recruiter Ready</div>
+          <h2 class="section-title" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin-top:14px;">Minimal on-page. Maximum impression.</h2>
           <p class="section-text">
-            Die Website gibt einen starken Überblick, während die vollständigen beruflichen
-            Informationen sauber im herunterladbaren CV gebündelt bleiben.
+            The site gives a strong overview, but the full professional background stays cleanly inside the downloadable CV.
           </p>
         </div>
         <div class="hero-actions" style="margin-top:22px;">
-          <a href="assets/Lebenslauf_Nevil_Maru_IT_Support.pdf" download class="btn btn-primary magnetic">Lebenslauf herunterladen</a>
+          <a href="assets/Lebenslauf_Nevil_Maru_IT_Support.pdf" download class="btn btn-primary magnetic">Get PDF CV</a>
         </div>
       </div>
     </div>
@@ -1634,56 +1637,55 @@
 
   <section class="section" id="experience">
     <div class="panel glass reveal" style="padding:30px;">
-      <div class="section-label">Erfahrung</div>
-      <h2 class="section-title">Erfahrung an der Schnittstelle von Menschen, Systemen und Umsetzung.</h2>
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Work that blends people, systems, and execution.</h2>
       <p class="section-text">
-        Mein Hintergrund verbindet direkten Kundenkontakt, operative Koordination,
-        Büroorganisation und praktische Website-Arbeit.
+        My background combines direct customer interaction, operational coordination, office support, and hands-on website work.
       </p>
 
       <div class="timeline">
         <div class="job glass reveal tilt">
           <div class="job-top">
             <div>
-              <h3>Wix Website Entwickler</h3>
+              <h3>Wix Website Developer</h3>
               <div class="company">JobValley GmbH</div>
             </div>
             <time>05/2026 — 05/2026</time>
           </div>
-          <p>Erstellung und Bearbeitung responsiver Websites mit Wix, Pflege von Inhalten sowie Aufbau eines soliden Verständnisses für einfaches Webdesign.</p>
+          <p>Created and edited responsive websites in Wix, handled content updates, and developed basic web design understanding.</p>
         </div>
 
         <div class="job glass reveal tilt">
           <div class="job-top">
             <div>
-              <h3>Büroassistenz</h3>
+              <h3>Office Assistant</h3>
               <div class="company">JobValley GmbH</div>
             </div>
             <time>09/2025 — 05/2026</time>
           </div>
-          <p>Unterstützung administrativer Abläufe, präzise Pflege digitaler Unterlagen, Koordination interner Aufgaben und strukturierte Bearbeitung eingehender Anliegen.</p>
+          <p>Supported administrative operations, maintained digital records accurately, coordinated internal tasks, and handled requests efficiently.</p>
         </div>
 
         <div class="job glass reveal tilt">
           <div class="job-top">
             <div>
-              <h3>Kassierer / Verkaufsassistent</h3>
+              <h3>Cashier / Sales Assistant</h3>
               <div class="company">Primark, Berlin</div>
             </div>
             <time>03/2025 — 09/2025</time>
           </div>
-          <p>Arbeit in einem stark frequentierten Umfeld mit Fokus auf Servicequalität, Genauigkeit und professionellem Umgang mit Rückfragen und Problemen.</p>
+          <p>Worked in a fast-paced setting focused on service quality, process accuracy, and professional handling of customer issues.</p>
         </div>
 
         <div class="job glass reveal tilt">
           <div class="job-top">
             <div>
-              <h3>Teamleiter</h3>
+              <h3>Team Leader</h3>
               <div class="company">Flippothek</div>
             </div>
             <time>07/2024 — 03/2025</time>
           </div>
-          <p>Koordination von Abläufen, Priorisierung von Aufgaben und klare Kommunikation in dynamischen und sich schnell verändernden Situationen.</p>
+          <p>Coordinated workflows, prioritized tasks, and communicated clearly during changing operational situations.</p>
         </div>
       </div>
     </div>
@@ -1691,10 +1693,10 @@
 
   <section class="section" id="skills">
     <div class="skills-showcase glass reveal">
-      <div class="section-label" style="text-align:center;">Fähigkeiten</div>
-      <h2 class="section-title" style="text-align:center;">Orbit der Fähigkeiten</h2>
+      <div class="section-label" style="text-align:center;">Capabilities</div>
+      <h2 class="section-title" style="text-align:center;">Orbit of skills</h2>
       <p class="section-text" style="text-align:center; margin:0 auto 30px;">
-        Ein visuelles Skill-System statt einer weiteren langweiligen Aufzählung.
+        A visual skill system instead of another boring list.
       </p>
 
       <div class="orbit-scene">
@@ -1704,71 +1706,70 @@
 
         <div class="core">
           <div>
-            <strong>Fähigkeiten</strong>
+            <strong>Skills</strong>
             <span>IT</span>
           </div>
         </div>
 
         <div class="planet p1">Python <small>Code</small></div>
-        <div class="planet p2">SQL <small>Daten</small></div>
+        <div class="planet p2">SQL <small>Data</small></div>
         <div class="planet p3">HTML <small>Web</small></div>
 
         <div class="planet p4">Azure <small>Cloud</small></div>
         <div class="planet p5">Wix <small>Websites</small></div>
-        <div class="planet p6">MS Office <small>Produktivität</small></div>
+        <div class="planet p6">MS Office <small>Productivity</small></div>
 
         <div class="planet p7">Helpdesk <small>Support</small></div>
-        <div class="planet p8">Kommunikation <small>Nutzer</small></div>
-        <div class="planet p9">Dokumentation <small>Prozess</small></div>
+        <div class="planet p8">Communication <small>Users</small></div>
+        <div class="planet p9">Documentation <small>Process</small></div>
       </div>
     </div>
   </section>
 
   <section class="contact-panel glass reveal" id="contact">
-    <div class="section-label">Kontakt</div>
-    <h2 class="section-title">Lass den nächsten Klick zählen.</h2>
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Make the next click count.</h2>
     <p class="section-text">
-      Für Werkstudentenstellen, Praktika, Junior-IT-Support-Rollen oder websitebezogene
-      Aufgaben können Sie mich direkt hier kontaktieren.
+      For working student roles, internships, junior IT support positions, or website-related opportunities, reach out directly below.
     </p>
 
-    <div class="contact-form-wrap">
-        <div class="section-label">Direktnachricht</div>
-        <h3 style="margin:10px 0 0; font-size:1.4rem;">Nachricht direkt senden</h3>
-        <p class="form-note">Füllen Sie das Formular aus, und die Nachricht wird direkt an meine E-Mail-Adresse gesendet.</p>
+          <div class="contact-form-wrap">
+        <div class="section-label">Direct Message</div>
+        <h3 style="margin:10px 0 0; font-size:1.4rem;">Send a message directly</h3>
+        <p class="form-note">Fill out the form below and the message will be sent to my email.</p>
+
+       <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="c6285def-7fac-4104-97bc-089a1b90085e">
+        <input type="hidden" name="subject" value="New portfolio contact form message">
+        <input type="hidden" name="from_name" value="Nevil Maru Portfolio">
+        <input type="checkbox" name="botcheck" style="display:none;">
       
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="YOUR_REAL_KEY">
-          <input type="hidden" name="subject" value="Neue Nachricht über das Portfolio">
-          <input type="hidden" name="from_name" value="Nevil Maru Portfolio">
-          <input type="checkbox" name="botcheck" style="display:none;">
-        
-          <div class="form-row">
-            <input type="text" name="name" placeholder="Ihr Name" required>
-            <input type="email" name="email" placeholder="Ihre E-Mail" required>
-          </div>
-        
-          <input type="text" name="company" placeholder="Unternehmen / Organisation" class="full">
-          <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
-        
-          <div class="h-captcha" data-captcha="true" data-lang="de" data-theme="dark"></div>
-        
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary magnetic">Nachricht senden</button>
-          </div>
-        </form>
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+      
+        <input type="text" name="company" placeholder="Company / Organization" class="full">
+        <textarea name="message" placeholder="Your message" required></textarea>
+      
+        <div class="h-captcha" data-captcha="true" data-lang="en" data-theme="dark"></div>
+      
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+        </div>
+      </form>
     
     
     <div class="contact-grid">
       <a class="contact-card magnetic" href="mailto:nevilmaru03@gmail.com">
-        <span>E-Mail</span>
+        <span>Email</span>
         <strong>nevilmaru03@gmail.com</strong>
       </a>
 
-       
+
       
       <a class="contact-card magnetic" href="tel:+4917684031486">
-        <span>Telefon</span>
+        <span>Phone</span>
         <strong>0176 84031486</strong>
       </a>
 
@@ -1778,8 +1779,8 @@
       </a>
 
       <a class="contact-card magnetic" href="assets/Lebenslauf_Nevil_Maru_IT_Support.pdf" download>
-        <span>Lebenslauf herunterladen</span>
-        <strong>Vollständigen PDF-Lebenslauf herunterladen</strong>
+        <span>Download CV</span>
+        <strong>Get the full PDF résumé</strong>
       </a>
     </div>
   </section>
@@ -1891,31 +1892,30 @@
         item.style.transform = '';
       });
     });
-  
-    
-      const themeToggle = document.getElementById('themeToggle');
-      
-      if (themeToggle) {
-        const savedTheme = localStorage.getItem('theme');
-      
-        if (savedTheme === 'light') {
-          document.body.classList.add('light-mode');
-          themeToggle.textContent = '🌙';
-        } else {
-          themeToggle.textContent = '☀️';
-        }
-      
-        themeToggle.addEventListener('click', () => {
-          document.body.classList.toggle('light-mode');
-          const isLight = document.body.classList.contains('light-mode');
-          localStorage.setItem('theme', isLight ? 'light' : 'dark');
-          themeToggle.textContent = isLight ? '🌙' : '☀️';
-        });
-      }
+
    
-    
+     const themeToggle = document.getElementById('themeToggle');
+
+        if (themeToggle) {
+          const savedTheme = localStorage.getItem('theme');
+        
+          if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeToggle.textContent = '🌙';
+          } else {
+            themeToggle.textContent = '☀️';
+          }
+        
+          themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            themeToggle.textContent = isLight ? '🌙' : '☀️';
+          });
+        }
+
     
   </script>
- <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
